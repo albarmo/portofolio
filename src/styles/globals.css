@@ -19,6 +19,14 @@
     #000027 100%
   );
 }
+.bg-container {
+  min-width: 100vw;
+  background: radial-gradient(
+    67.1% 81.39% at 90.69% 8.11%,
+    #000027 10.56%,
+    #000027 100%
+  );
+}
 
 .gradient-menu {
   background: linear-gradient(

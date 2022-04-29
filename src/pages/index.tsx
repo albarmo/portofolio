@@ -2,17 +2,38 @@ import React from 'react'
 import Head from 'next/head'
 import type { NextPage } from 'next'
 import Navbar from '@components/Navbar'
-import { Box, Container, Flex, Text, Image, Center } from '@chakra-ui/react'
+import {
+  Box,
+  Container,
+  Flex,
+  Text,
+  Image,
+  Center,
+  HStack,
+  Tag,
+  IconButton,
+} from '@chakra-ui/react'
 import Loading from '@components/Loading'
 import Lottie from 'react-lottie'
 import animationData from '../../public/assets/shape-geometrics.json'
+import animationFlow from '../../public/assets/75794-diferencia-legal.json'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import { BsDiscord, BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
+import Footer from '@components/Footer'
 
 const defaultOptions = {
   loop: true,
   autoplay: true,
   animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+}
+const flowAnimationSetting = {
+  loop: true,
+  autoplay: true,
+  animationData: animationFlow,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
@@ -44,6 +65,44 @@ const Home: NextPage = () => {
     },
   }
 
+  const responsiveProject = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 2.6,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1.2,
+    },
+  }
+
+  const responsiveBlogs = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4.5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1.2,
+    },
+  }
+
   const SquareCard: React.FC<{ item: any }> = ({ item }) => {
     return (
       <Box>
@@ -53,6 +112,34 @@ const Home: NextPage = () => {
           src="https://bit.ly/dan-abramov"
           alt={item}
         />
+      </Box>
+    )
+  }
+
+  const ProjectCard: React.FC<{ item: any }> = ({ item }) => {
+    return (
+      <Box>
+        <Image
+          w="420px"
+          h="280px"
+          objectFit="contain"
+          src="../assets/project-1.jpg"
+          alt={item}
+        />
+      </Box>
+    )
+  }
+
+  const BlogCard: React.FC<{ item: any }> = ({ item }) => {
+    return (
+      <Box w="220px">
+        <Tag variant="solid" colorScheme="teal" size="sm" mb="4">
+          Teal
+        </Tag>
+        <Text className="text-md font-semibold text-justify">
+          Five Ways Tech Startups Are Different from Other Small and
+          Medium-Sized Enterprises
+        </Text>{' '}
       </Box>
     )
   }
@@ -123,6 +210,147 @@ const Home: NextPage = () => {
           </Carousel>
         </Box>
       </Container>
+      <Container className="xs:pt-8 container sm:pt-20 xl:p-20 items-center text-white">
+        <Flex
+          w="container.xl"
+          justifyContent="space-evenly"
+          className="xs:flex-col-reverse sm:flex-row"
+          align="center"
+        >
+          <Box w="40%">
+            <Lottie options={flowAnimationSetting} width={350} />
+          </Box>
+          <Box className="w-2/6">
+            <Text className="text-3xl font-bold">#Albarms</Text>
+            <Text className="text-custom-yellow">I am a Softawe Engineer</Text>
+            <Text className="text-justify mt-5">
+              I Love to code. Creativity Design, Adventures, I'm a software
+              developer, i like to learn a new things and solve challenge with a
+              creativity
+            </Text>
+          </Box>
+        </Flex>
+      </Container>
+      <Container className="xs:pt-8 container sm:pt-20 xl:p-20 items-center text-white">
+        <Flex
+          w="container.xl"
+          justifyContent="space-between"
+          className="xs:flex-col-reverse sm:flex-row"
+          align="center"
+        >
+          <Box>
+            <HStack>
+              <Text className="text-4xl font-bold">#Project</Text>{' '}
+              <Text className="text-4xl font-bold text-custom-yellow">
+                Showcase
+              </Text>
+            </HStack>
+            <Text className="text-gray-500 mt-3">
+              Boleh diliat liat dulu kakak..
+            </Text>
+          </Box>
+        </Flex>
+        <Box mt="10">
+          <Text className="text-custom-yellow mb-5">Tech Stack</Text>
+          <Carousel responsive={responsiveProject}>
+            {['1', '2', '3', '4', '5']?.map((item: any, index: number) => (
+              <ProjectCard item={item} />
+            ))}
+          </Carousel>
+        </Box>
+      </Container>
+      <Container className="xs:pt-8 container sm:pt-20 xl:p-20 xl:pt-0 items-center text-white">
+        <Flex
+          w="container.xl"
+          justifyContent="space-between"
+          className="xs:flex-col-reverse sm:flex-row"
+          align="center"
+        >
+          <Box>
+            <HStack>
+              <Text className="text-4xl font-extrabold">#Blogs</Text>{' '}
+            </HStack>
+            <Text className="text-gray-500 mt-3">Sharing is caring..</Text>
+          </Box>
+        </Flex>
+        <Box mt="10">
+          <Carousel responsive={responsiveBlogs}>
+            {['1', '2', '3', '4', '5']?.map((item: any, index: number) => (
+              <BlogCard item={item} />
+            ))}
+          </Carousel>
+        </Box>
+      </Container>
+      <Container
+        overflow="hidden"
+        className="container xs:pt-8 sm:pt-20 xl:pt-0 items-center text-white"
+      >
+        <Flex
+          w="100vw"
+          justifyContent="space-evenly"
+          className="xs:flex-col-reverse sm:flex-row"
+          overflow="hidden"
+        >
+          <Image
+            src="/assets/planet-02.png"
+            alt="moon"
+            // className="xs:w-60 sm:w-80"
+            left="-10"
+            position="absolute"
+            overflow="hidden"
+          />
+          <Flex
+            className="flex-col justify-center items-start max-w-md"
+            mt="100"
+            ml="50"
+          >
+            <Text fontSize="4xl" fontWeight="bold">
+              Get In Touch
+            </Text>
+            <Text fontSize="md" mt="3">
+              Moerhamsa@gmail.com
+            </Text>
+            <Box mt="10">
+              <Text className="font-semibold text-white">Let's Connected!</Text>
+              <HStack mt="3" spacing={5} alignItems="flex-start">
+                <IconButton
+                  aria-label="facebook"
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  _hover={{ bg: '#0D74FF' }}
+                  icon={<BsDiscord size="20px" color="white" />}
+                />
+                <IconButton
+                  aria-label="github"
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  _hover={{ bg: '#0D74FF' }}
+                  icon={<BsInstagram size="20px" color="white" />}
+                />
+                <IconButton
+                  aria-label="github"
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  _hover={{ bg: '#0D74FF' }}
+                  icon={<BsGithub size="20px" color="white" />}
+                />
+                <IconButton
+                  aria-label="discord"
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  _hover={{ bg: '#0D74FF' }}
+                  icon={<BsLinkedin size="20px" color="white" />}
+                />
+              </HStack>
+            </Box>
+          </Flex>
+        </Flex>
+      </Container>
+      <Footer />
     </>
   )
 }
