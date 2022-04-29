@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+.container-gradient {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: radial-gradient(
+    67.1% 81.39% at 90.69% 8.11%,
+    #890048 0%,
+    #540048 50.56%,
+    #000027 100%
+  );
+}
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: radial-gradient(
+    67.1% 81.39% at 90.69% 8.11%,
+    #000027 10.56%,
+    #000027 100%
+  );
+}
+
+.gradient-menu {
+  background: linear-gradient(
+    to right bottom,
+    rgb(17, 24, 39),
+    rgb(22, 26, 31)
+  );
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.showme:hover + #hideme {
+  visibility: visible;
+}
+
+#hideme {
+  visibility: hidden;
+  position: absolute;
+}
