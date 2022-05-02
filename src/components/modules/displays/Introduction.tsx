@@ -55,8 +55,8 @@ const Introduction: React.FC = () => {
         className="xs:flex-col-reverse sm:flex-row"
         align="center"
       >
-        <Box p={[10, 5, 5]}>
-          <Text className="text-3xl font-bold">#Albarms</Text>
+        <Box p={[5, 5, 5]}>
+          <Text className="text-3xl font-bold">#Tech</Text>
           <Text className="text-custom-yellow">I am a Softawe Engineer</Text>
           <Text className="w-2/4 xs:w-full text-justify">
             I Love to code. Creativity Design, Adventures, I'm a software
@@ -64,12 +64,12 @@ const Introduction: React.FC = () => {
             creativity
           </Text>
         </Box>
-        <Box bg="red">
+        <Box>
           <Lottie options={defaultOptions} width={350} />
         </Box>
       </Flex>
       <Box
-        p={[5, 15, 5]}
+        p={[10, 15, 5]}
         w={['400px', '100%', 'container.sm', 'container.sm', 'container.lg']}
       >
         <Text className="text-custom-yellow mb-5">Tech Stack</Text>

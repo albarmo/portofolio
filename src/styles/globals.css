@@ -18,7 +18,7 @@
   min-height: 80vh;
   min-width: 100vw;
   background: radial-gradient(
-    97.1% 38.91% at 90.69% 2.11%,
+    97.1% 38.91% at 0.69% 2.11%,
     #890048 0%,
     #540048 50.56%,
     #000027 100%
@@ -30,7 +30,8 @@
 }
 
 .container {
-  min-height: 100vh;
+  box-shadow: 0 0 0 1px black;
+  min-height: auto;
   min-width: 100vw;
   background: radial-gradient(
     67.1% 81.39% at 90.69% 8.11%,
@@ -40,8 +41,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: none;
 }
 .bg-container {
+  box-shadow: 0 0 0 1px black;
   min-width: 100vw;
   background: radial-gradient(
     67.1% 81.39% at 90.69% 8.11%,
@@ -59,10 +62,17 @@
 }
 
 * {
-  box-sizing: border-box;
+  margin: 0;
+  border-color: linear-gradient(
+    to right bottom,
+    rgb(17, 24, 39),
+    rgb(22, 26, 31)
+  );
+  /* box-sizing: border-box; */
   font-family: 'Saira', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
 .showme:hover + #hideme {
   visibility: visible;
 }

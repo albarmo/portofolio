@@ -33,11 +33,11 @@ const FocusedText: React.FC = () => {
           <Lottie options={flowAnimationSetting} width={350} />
         </Box>
         <Box
-          p={[5, 15, 5]}
+          p={[10, 15, 5]}
           w={['400px', '100%', 'container.sm', 'container.sm', 'container.lg']}
           className="lg:w-2/6 xs:bg-red.50"
         >
-          <Text className="text-3xl font-bold">#Albarms</Text>
+          <Text className="text-3xl font-bold">#About</Text>
           <Text className="text-custom-yellow">I am a Softawe Engineer</Text>
           <Text className="text-justify mt-5">
             I Love to code. Creativity Design, Adventures, I'm a software

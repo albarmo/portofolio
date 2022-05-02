@@ -13,7 +13,7 @@ const BlogDetail: React.FC = () => {
         className="container-mini-gradient xs:pt-8 sm:pt-20 p-20 items-center text-white"
       >
         <Flex
-          w={['400px', '100%', 'container.sm', 'container.sm', 'container.lg']}
+          w={['90vw', '100%', 'container.sm', 'container.sm', 'container.lg']}
           justifyContent="space-between"
           className="xs:flex-col-reverse sm:flex-row"
         >

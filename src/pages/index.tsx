@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 8000)
+    }, 1)
     return () => clearTimeout(timer)
   }, [])
 
