@@ -8,12 +8,13 @@ import animationData from '../../public/assets/shape-geometrics.json'
 import animationFlow from '../../public/assets/75794-diferencia-legal.json'
 import 'react-multi-carousel/lib/styles.css'
 import Footer from '@components/Footer'
-import Hero from '@components/Hero'
+import Hero from '@components/modules/displays/Hero'
 import Introduction from '@components/modules/displays/Introduction'
 import FocusedText from '@components/modules/displays/FocusedText'
 import ProjectShowcase from '@components/modules/displays/ProjectShowCase'
 import Blogs from '@components/modules/displays/Blog/Blogs'
 import GetInTouch from '@components/modules/displays/GetInTouch'
+import Extras from '@components/modules/displays/Extras'
 
 const Home: NextPage = () => {
   const [loading, setLoading] = React.useState<boolean>(true)
@@ -43,6 +44,7 @@ const Home: NextPage = () => {
       <FocusedText />
       <ProjectShowcase />
       <Blogs />
+      <Extras />
       <GetInTouch />
       <Footer />
     </>

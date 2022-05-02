@@ -5,7 +5,7 @@ interface IPropsProjectCard {
 }
 const ProjectCard: React.FC<IPropsProjectCard> = ({ item }) => {
   return (
-    <Box>
+    <Box mr={[0, 5]}>
       <Image
         w="420px"
         h="280px"

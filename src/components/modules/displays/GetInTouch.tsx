@@ -14,26 +14,24 @@ import { BsDiscord, BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
 const GetInTouch: React.FC = () => {
   return (
     <Container
-      overflow="hidden"
+      h="100vh"
       className="container xs:pt-8 sm:pt-20 xl:pt-0 items-center text-white"
     >
       <Flex
-        w="100vw"
         justifyContent="space-evenly"
         className="xs:flex-col-reverse sm:flex-row"
-        overflow="hidden"
       >
         <Image
           src="/assets/planet-02.png"
           alt="moon"
-          left="-10"
+          left="-110"
           position="absolute"
-          overflow="hidden"
+          zIndex={1}
         />
         <Flex
+          zIndex={2}
           className="flex-col justify-center items-start max-w-md"
           mt="100"
-          ml="100"
         >
           <Text fontSize="4xl" fontWeight="bold">
             Get In Touch

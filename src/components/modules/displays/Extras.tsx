@@ -4,8 +4,8 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import TitleCard from '@components/modules/cards/TitleCard'
 
-const Blogs: React.FC = () => {
-  const responsiveBlogs = {
+const Extras: React.FC = () => {
+  const responsiveExtras = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
@@ -25,10 +25,7 @@ const Blogs: React.FC = () => {
   }
 
   return (
-    <Container
-      h="90vh"
-      className="xs:pt-0 xs:pb-20 container xl:p-20 xl:pt-0 items-center text-white"
-    >
+    <Container className="xs:pt-0 xs:pb-20 container xl:p-20 xl:pt-0 items-center text-white">
       <Flex
         w={['100%', '100%', 'container.sm', 'container.md', 'container.lg']}
         justifyContent="space-between"
@@ -37,8 +34,10 @@ const Blogs: React.FC = () => {
         p={[2, 0]}
       >
         <Box w="full">
-          <Text className="text-4xl font-extrabold">#Blogs</Text>
-          <Text className="text-gray-500 mt-3">Sharing is caring..</Text>
+          <Text className="text-4xl font-extrabold">#Extras</Text>
+          <Text className="text-gray-500 mt-3">
+            I'm just want to share everything for u..
+          </Text>
         </Box>
       </Flex>
       <Box
@@ -46,7 +45,7 @@ const Blogs: React.FC = () => {
         pl={[3, 0]}
         w={['100%', '100%', 'container.sm', 'container.sm', 'container.lg']}
       >
-        <Carousel responsive={responsiveBlogs}>
+        <Carousel responsive={responsiveExtras}>
           {['1', '2', '3', '4', '5']?.map((item: any, index: number) => (
             <TitleCard key={index} item={item} />
           ))}
@@ -56,4 +55,4 @@ const Blogs: React.FC = () => {
   )
 }
 
-export default Blogs
+export default Extras

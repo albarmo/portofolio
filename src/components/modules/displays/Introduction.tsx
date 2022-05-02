@@ -30,7 +30,7 @@ const Introduction: React.FC = () => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 3.1,
     },
   }
 
@@ -48,27 +48,30 @@ const Introduction: React.FC = () => {
   }
 
   return (
-    <Container className="xs:pt-8 container sm:pt-20 xl:p-20 xs:w-5/6 xs:bg-blue-400 sm:bg-red-50 items-center text-white">
+    <Container className="container xs:pt-8 sm:pt-10 xl:p-20 xs:w-5/6 xs:bg-blue-400 sm:bg-red-50 items-center text-white">
       <Flex
-        w="container.lg"
+        w={['100vw', '100vw', 'container.sm', 'container.md', 'container.lg']}
         justifyContent="space-between"
         className="xs:flex-col-reverse sm:flex-row"
         align="center"
       >
-        <Box>
+        <Box p={[10, 5, 5]}>
           <Text className="text-3xl font-bold">#Albarms</Text>
           <Text className="text-custom-yellow">I am a Softawe Engineer</Text>
-          <Text className="w-2/4 text-justify mt-5">
+          <Text className="w-2/4 xs:w-full text-justify">
             I Love to code. Creativity Design, Adventures, I'm a software
             developer, i like to learn a new things and solve challenge with a
             creativity
           </Text>
         </Box>
-        <Box bg="blue.600">
-          <Lottie options={defaultOptions} width={250} />
+        <Box bg="red">
+          <Lottie options={defaultOptions} width={350} />
         </Box>
       </Flex>
-      <Box mt="10" w="container.lg">
+      <Box
+        p={[5, 15, 5]}
+        w={['400px', '100%', 'container.sm', 'container.sm', 'container.lg']}
+      >
         <Text className="text-custom-yellow mb-5">Tech Stack</Text>
         <Carousel responsive={responsive}>
           {['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']?.map(

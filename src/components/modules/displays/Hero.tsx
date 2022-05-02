@@ -11,9 +11,12 @@ const Hero: React.FC = () => {
           justifyContent="space-between"
           className="xs:flex-col-reverse sm:flex-row"
         >
-          <Flex className="flex-col justify-center items-start max-w-md">
+          <Flex
+            mt={[20, 0]}
+            className="flex-col justify-center items-start max-w-md"
+          >
             <Text fontSize="lg">Saturn</Text>
-            <Text fontSize="2xl" fontWeight="bold">
+            <Text fontSize={['2xl', '3xl', '4xl']} fontWeight="bold">
               Inspired by love and guided by knowledge
             </Text>
             <Text fontSize="sm" mt="3">
