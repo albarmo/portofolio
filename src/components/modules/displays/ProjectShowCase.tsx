@@ -55,7 +55,7 @@ const ProjectShowcase: React.FC = () => {
       >
         <Carousel responsive={responsiveProject}>
           {['1', '2', '3', '4', '5']?.map((item: any, index: number) => (
-            <ProjectCard item={item} />
+            <ProjectCard key={index} item={item} />
           ))}
         </Carousel>
       </Box>

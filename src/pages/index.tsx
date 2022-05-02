@@ -2,10 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import type { NextPage } from 'next'
 import Navbar from '@components/Navbar'
-import { Box, Text, Image, Tag } from '@chakra-ui/react'
 import Loading from '@components/Loading'
-import animationData from '../../public/assets/shape-geometrics.json'
-import animationFlow from '../../public/assets/75794-diferencia-legal.json'
 import 'react-multi-carousel/lib/styles.css'
 import Footer from '@components/Footer'
 import Hero from '@components/modules/displays/Hero'
@@ -22,7 +19,7 @@ const Home: NextPage = () => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 1)
+    }, 8000)
     return () => clearTimeout(timer)
   }, [])
 

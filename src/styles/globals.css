@@ -13,8 +13,24 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.container-mini-gradient {
+  min-height: 80vh;
+  min-width: 100vw;
+  background: radial-gradient(
+    97.1% 38.91% at 90.69% 2.11%,
+    #890048 0%,
+    #540048 50.56%,
+    #000027 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .container {
-  min-height: auto;
+  min-height: 100vh;
   min-width: 100vw;
   background: radial-gradient(
     67.1% 81.39% at 90.69% 8.11%,
