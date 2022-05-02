@@ -109,7 +109,7 @@ const Home: NextPage = () => {
         <Image
           boxSize="80px"
           objectFit="cover"
-          src="https://bit.ly/dan-abramov"
+          src="https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png"
           alt={item}
         />
       </Box>
