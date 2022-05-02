@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, Box, Image, Stack } from '@chakra-ui/react'
+import { Text, Flex, Box, Image } from '@chakra-ui/react'
 import MenuDrawer from './Drawer'
 
 const Navbar: React.FC = () => {
