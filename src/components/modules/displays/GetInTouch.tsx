@@ -7,11 +7,15 @@ import {
   Image,
   HStack,
   IconButton,
+  Button,
+  Stack,
 } from '@chakra-ui/react'
 import 'react-multi-carousel/lib/styles.css'
 import { BsDiscord, BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
+import { useRouter } from 'next/router'
 
 const GetInTouch: React.FC = () => {
+  const router = useRouter()
   return (
     <Container
       h="100vh"
@@ -36,9 +40,18 @@ const GetInTouch: React.FC = () => {
           <Text fontSize="4xl" fontWeight="bold">
             Get In Touch
           </Text>
-          <Text fontSize="md" mt="3">
-            Moerhamsa@gmail.com
-          </Text>
+          <Stack direction="row" spacing={5} mt="5">
+            <Button
+              colorScheme="teal"
+              variant="solid"
+              onClick={() => router.push('/send-feedback')}
+            >
+              Send Email
+            </Button>
+            <Button colorScheme="teal" variant="ghost">
+              Send Feedback
+            </Button>
+          </Stack>
           <Box mt="10">
             <Text className="font-semibold text-white">Let's Connected!</Text>
             <HStack mt="3" spacing={5} alignItems="flex-start">

@@ -57,8 +57,8 @@ const Introduction: React.FC = () => {
       >
         <Box p={[5, 5, 5]}>
           <Text className="text-3xl font-bold">#Tech</Text>
-          <Text className="text-custom-yellow">I am a Softawe Engineer</Text>
-          <Text className="w-2/4 xs:w-full text-justify">
+          <Text className="text-custom-yellow">Softawe Engineer</Text>
+          <Text className="w-2/4 xs:w-full text-justify mt-3">
             I Love to code. Creativity Design, Adventures, I'm a software
             developer, i like to learn a new things and solve challenge with a
             creativity
