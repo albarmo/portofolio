@@ -33,7 +33,7 @@ const GetInTouch: React.FC = () => {
         <Flex
           className="flex-col justify-center items-start max-w-md"
           mt="100"
-          ml="50"
+          ml="100"
         >
           <Text fontSize="4xl" fontWeight="bold">
             Get In Touch

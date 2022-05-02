@@ -6,13 +6,13 @@ interface IPropsBlogCard {
 const BlogCard: React.FC<IPropsBlogCard> = ({ item }) => {
   return (
     <Box w="220px">
-      <Tag variant="solid" colorScheme="teal" size="sm" mb="4">
-        Teal
+      <Tag variant="solid" colorScheme="yellow" size="sm" mb="4">
+        React
       </Tag>
-      <Text className="text-md font-semibold text-justify">
+      <Text className="text-sm font-semibold text-justify">
         Five Ways Tech Startups Are Different from Other Small and Medium-Sized
         Enterprises
-      </Text>{' '}
+      </Text>
     </Box>
   )
 }

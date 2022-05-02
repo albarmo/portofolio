@@ -10,6 +10,8 @@
     #540048 50.56%,
     #000027 100%
   );
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .container {
   min-height: 100vh;
@@ -19,6 +21,9 @@
     #000027 10.56%,
     #000027 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .bg-container {
   min-width: 100vw;

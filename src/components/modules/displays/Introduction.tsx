@@ -1,5 +1,4 @@
 import React from 'react'
-import type { NextPage } from 'next'
 import { Box, Container, Flex, Text, Image } from '@chakra-ui/react'
 import Lottie from 'react-lottie'
 import animationData from '../../../../public/assets/shape-geometrics.json'
@@ -27,11 +26,11 @@ const Introduction: React.FC = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 4,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 3,
+      items: 1,
     },
   }
 
@@ -49,9 +48,9 @@ const Introduction: React.FC = () => {
   }
 
   return (
-    <Container className="xs:pt-8 container sm:pt-20 xl:p-20 items-center text-white">
+    <Container className="xs:pt-8 container sm:pt-20 xl:p-20 xs:w-5/6 xs:bg-blue-400 sm:bg-red-50 items-center text-white">
       <Flex
-        w="container.xl"
+        w="container.lg"
         justifyContent="space-between"
         className="xs:flex-col-reverse sm:flex-row"
         align="center"
@@ -69,7 +68,7 @@ const Introduction: React.FC = () => {
           <Lottie options={defaultOptions} width={250} />
         </Box>
       </Flex>
-      <Box mt="10">
+      <Box mt="10" w="container.lg">
         <Text className="text-custom-yellow mb-5">Tech Stack</Text>
         <Carousel responsive={responsive}>
           {['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']?.map(

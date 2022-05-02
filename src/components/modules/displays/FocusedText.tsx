@@ -17,7 +17,7 @@ const FocusedText: React.FC = () => {
   return (
     <Container className="xs:pt-8 container sm:pt-20 xl:p-20 items-center text-white">
       <Flex
-        w="container.xl"
+        w="container.lg"
         justifyContent="space-evenly"
         className="xs:flex-col-reverse sm:flex-row"
         align="center"

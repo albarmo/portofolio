@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <Container className="container-gradient xs:pt-8 sm:pt-20 p-10 items-center text-white">
       <Center mt="20">
         <Flex
-          w="container.xl"
+          w="container.lg"
           justifyContent="space-between"
           className="xs:flex-col-reverse sm:flex-row"
         >

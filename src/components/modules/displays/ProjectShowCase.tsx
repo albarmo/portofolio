@@ -9,11 +9,11 @@ const ProjectShowcase: React.FC = () => {
   const responsiveProject = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 3,
+      items: 2.5,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 2.6,
+      items: 2.2,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -28,7 +28,7 @@ const ProjectShowcase: React.FC = () => {
   return (
     <Container className="xs:pt-8 container sm:pt-20 xl:p-20 items-center text-white">
       <Flex
-        w="container.xl"
+        w="container.lg"
         justifyContent="space-between"
         className="xs:flex-col-reverse sm:flex-row"
         align="center"
@@ -45,7 +45,7 @@ const ProjectShowcase: React.FC = () => {
           </Text>
         </Box>
       </Flex>
-      <Box mt="10">
+      <Box mt="10" w="container.lg">
         <Text className="text-custom-yellow mb-5">Tech Stack</Text>
         <Carousel responsive={responsiveProject}>
           {['1', '2', '3', '4', '5']?.map((item: any, index: number) => (
