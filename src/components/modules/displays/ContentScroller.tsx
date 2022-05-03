@@ -88,7 +88,7 @@ const food: [string, number, number][] = [
 
 const ContentScroller: any = () => {
   return food.map(([emoji, hueA, hueB], index) => (
-    <Container className="container text-white pb-20">
+    <Container className="container text-white pb-20" key={index}>
       <Center>
         <Box display={'flex'} justifyContent="center" mt="20">
           <Card emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} id={index} />
