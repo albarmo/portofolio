@@ -4,25 +4,12 @@ import {
   Container,
   Flex,
   Text,
-  Image,
   Input,
   Textarea,
   Button,
 } from '@chakra-ui/react'
-import Lottie from 'react-lottie'
-import animationData from '../../public/assets/shape-geometrics.json'
-import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { useRouter } from 'next/router'
-
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: animationData,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-}
 
 const FeedbackForm: React.FC = () => {
   const router = useRouter()
