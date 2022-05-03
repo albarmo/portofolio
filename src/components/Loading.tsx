@@ -18,11 +18,15 @@ const Loading: React.FC = () => {
   const menus = [
     {
       title:
-        'The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela',
+        'Tell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin Franklin',
     },
     {
       title:
         'The way to get started is to quit talking and begin doing. -Walt Disney',
+    },
+    {
+      title:
+        'The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela',
     },
     {
       title:
@@ -31,10 +35,6 @@ const Loading: React.FC = () => {
     {
       title:
         'The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt',
-    },
-    {
-      title:
-        'Tell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin Franklin',
     },
   ]
 
@@ -48,7 +48,6 @@ const Loading: React.FC = () => {
       }
     }, 3000)
   }, [])
-
 
   return (
     <>

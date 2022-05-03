@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Flex, Text, Image, Center } from '@chakra-ui/react'
 import 'react-multi-carousel/lib/styles.css'
 import Head from 'next/head'
+import Script from 'next/script'
 
 const Hero: React.FC = () => {
   const Parallax = require('parallax-js')
@@ -14,13 +15,11 @@ const Hero: React.FC = () => {
       new Parallax(scene2)
       new Parallax(scene3)
     }
-  }, [])
+  }, [Parallax])
 
   return (
     <>
-      <Head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-      </Head>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></Script>
       <Container className="container-gradient xs:pt-8 sm:pt-20 p-10 items-center text-white">
         <div id="scene1">
           <div data-depth="0.3">
