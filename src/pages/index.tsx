@@ -12,6 +12,7 @@ import ProjectShowcase from '@components/modules/displays/ProjectShowCase'
 import Blogs from '@components/modules/displays/Blog/Blogs'
 import GetInTouch from '@components/modules/displays/GetInTouch'
 import Extras from '@components/modules/displays/Extras'
+import ContentScroller from '@components/modules/displays/ContentScroller'
 
 const Home: NextPage = () => {
   const [loading, setLoading] = React.useState<boolean>(true)
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 1)
     return () => clearTimeout(timer)
   }, [])
 
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
       <Navbar />
       <Hero />
       <body>
+        <ContentScroller />
         <Introduction />
         <FocusedText />
         <ProjectShowcase />

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Flex, Text, Image, Center } from '@chakra-ui/react'
 import 'react-multi-carousel/lib/styles.css'
-import Head from 'next/head'
 import Script from 'next/script'
 
 const Hero: React.FC = () => {
@@ -57,7 +56,7 @@ const Hero: React.FC = () => {
               </div>
             </Flex>
 
-            <div id="scene3">
+            <div id="scene3" className="mt-20">
               <div data-depth="0.8">
                 <Center className="xs:mb-10 sm:mb-0">
                   <Image
