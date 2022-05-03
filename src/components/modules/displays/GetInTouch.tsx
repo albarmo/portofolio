@@ -23,8 +23,6 @@ const GetInTouch: React.FC = () => {
   const [value] = React.useState('albarm#2988')
   const { hasCopied, onCopy } = useClipboard(value)
 
-  console.log(onCopy, hasCopied)
-
   return (
     <Container
       h="100vh"

@@ -49,7 +49,6 @@ const Loading: React.FC = () => {
     }, 3000)
   }, [])
 
-  console.log(id)
 
   return (
     <>
