@@ -37,12 +37,14 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <Hero />
-      <Introduction />
-      <FocusedText />
-      <ProjectShowcase />
-      <Blogs />
-      <Extras />
-      <GetInTouch />
+      <body>
+        <Introduction />
+        <FocusedText />
+        <ProjectShowcase />
+        <Blogs />
+        <Extras />
+        <GetInTouch />
+      </body>
       <Footer />
     </>
   )
