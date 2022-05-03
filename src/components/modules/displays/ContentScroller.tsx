@@ -1,6 +1,5 @@
 import { Box, Center, Container, Text, Image } from '@chakra-ui/react'
 import { motion, Variants } from 'framer-motion'
-import ProjectCard from '../cards/ProjectCard'
 
 interface Props {
   emoji: string
@@ -87,7 +86,7 @@ const food: [string, number, number][] = [
   ['🍋', 60, 90],
 ]
 
-export default function ContentScroller() {
+const ContentScroller: any = () => {
   return food.map(([emoji, hueA, hueB], index) => (
     <Container className="container text-white pb-20">
       <Center>
@@ -98,3 +97,5 @@ export default function ContentScroller() {
     </Container>
   ))
 }
+
+export default ContentScroller
