@@ -7,7 +7,7 @@ interface IPropsBlogCard {
 const BlogCard: React.FC<IPropsBlogCard> = ({ item }) => {
   const router = useRouter()
   return (
-    <Box w="220px">
+    <Box w={['90%']} mb="5">
       <Tag variant="solid" colorScheme="teal" size="sm" mb="4">
         React
       </Tag>

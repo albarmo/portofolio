@@ -15,8 +15,10 @@ import {
 import React from 'react'
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { BsGithub, BsDiscord, BsLinkedin, BsInstagram } from 'react-icons/bs'
+import { useRouter } from 'next/router'
 
 const MenuDrawer = () => {
+  const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -31,7 +33,7 @@ const MenuDrawer = () => {
         <DrawerContent>
           <DrawerCloseButton color="white" />
           <DrawerBody className="gradient-menu">
-            <Text
+            {/* <Text
               mt="5"
               p="2"
               fontSize="2xl"
@@ -39,22 +41,39 @@ const MenuDrawer = () => {
               textColor="white"
             >
               Hi There, know me first here..
-            </Text>
+            </Text> */}
             <Flex className="text-white mt-10 flex-col justify-evenly">
               <Stack className="cursor-pointer rounded p-3 hover:bg-gradient-to-r from-blue-500 to-blue-700 opacity-80">
-                <Text className="font-semibold">Project Showcase</Text>
+                <Text
+                  onClick={() => router.push('/')}
+                  className="font-semibold"
+                >
+                  Homepage
+                </Text>
               </Stack>
               <Stack className="cursor-pointer rounded p-3 hover:bg-gradient-to-r from-blue-500 to-blue-700 opacity-80">
-                <Text className="font-semibold">About me</Text>
+                <Text
+                  onClick={() => router.push('/project')}
+                  className="font-semibold"
+                >
+                  Project Showcase
+                </Text>
               </Stack>
               <Stack className="cursor-pointer rounded p-3 hover:bg-gradient-to-r from-blue-500 to-blue-700 opacity-80">
-                <Text className="font-semibold">Contact</Text>
+                <Text
+                  onClick={() => router.push('/blog')}
+                  className="font-semibold"
+                >
+                  Writings
+                </Text>
               </Stack>
               <Stack className="cursor-pointer rounded p-3 hover:bg-gradient-to-r from-blue-500 to-blue-700 opacity-80">
-                <Text className="font-semibold">Blog</Text>
-              </Stack>
-              <Stack className="cursor-pointer rounded p-3 hover:bg-gradient-to-r from-blue-500 to-blue-700 opacity-80">
-                <Text className="font-semibold">Let me do it for u</Text>
+                <Text
+                  onClick={() => router.push('/contact')}
+                  className="font-semibold"
+                >
+                  Contact
+                </Text>
               </Stack>
             </Flex>
 

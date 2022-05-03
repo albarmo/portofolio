@@ -9,13 +9,22 @@ import {
   IconButton,
   Button,
   Stack,
+  useClipboard,
+  useToast,
 } from '@chakra-ui/react'
 import 'react-multi-carousel/lib/styles.css'
 import { BsDiscord, BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const GetInTouch: React.FC = () => {
   const router = useRouter()
+  const toast = useToast()
+  const [value] = React.useState('albarm#2988')
+  const { hasCopied, onCopy } = useClipboard(value)
+
+  console.log(onCopy, hasCopied)
+
   return (
     <Container
       h="100vh"
@@ -46,9 +55,6 @@ const GetInTouch: React.FC = () => {
               variant="solid"
               onClick={() => router.push('/send-feedback')}
             >
-              Send Email
-            </Button>
-            <Button colorScheme="teal" variant="ghost">
               Send Feedback
             </Button>
           </Stack>
@@ -56,6 +62,16 @@ const GetInTouch: React.FC = () => {
             <Text className="font-semibold text-white">Let's Connected!</Text>
             <HStack mt="3" spacing={5} alignItems="flex-start">
               <IconButton
+                onClick={() => {
+                  onCopy
+                  toast({
+                    title: `Copied discord id`,
+                    status: 'info',
+                    duration: 1000,
+                    isClosable: true,
+                    position: 'top',
+                  })
+                }}
                 aria-label="facebook"
                 variant="ghost"
                 size="lg"
@@ -63,30 +79,46 @@ const GetInTouch: React.FC = () => {
                 _hover={{ bg: '#0D74FF' }}
                 icon={<BsDiscord size="20px" color="white" />}
               />
-              <IconButton
-                aria-label="github"
-                variant="ghost"
-                size="lg"
-                isRound={true}
-                _hover={{ bg: '#0D74FF' }}
-                icon={<BsInstagram size="20px" color="white" />}
-              />
-              <IconButton
-                aria-label="github"
-                variant="ghost"
-                size="lg"
-                isRound={true}
-                _hover={{ bg: '#0D74FF' }}
-                icon={<BsGithub size="20px" color="white" />}
-              />
-              <IconButton
-                aria-label="discord"
-                variant="ghost"
-                size="lg"
-                isRound={true}
-                _hover={{ bg: '#0D74FF' }}
-                icon={<BsLinkedin size="20px" color="white" />}
-              />
+              <Link passHref href="https://www.instagram.com/albrm_">
+                <a target="_blank">
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    isRound={true}
+                    _hover={{ bg: '#0D74FF' }}
+                    icon={<BsInstagram size="20px" color="white" />}
+                  />
+                </a>
+              </Link>
+              <Link passHref href="https://github.com/albarmo">
+                <a target="_blank">
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    isRound={true}
+                    _hover={{ bg: '#0D74FF' }}
+                    icon={<BsGithub size="20px" color="white" />}
+                  />
+                </a>
+              </Link>
+
+              <Link
+                passHref
+                href="https://www.linkedin.com/in/albar-moerhamsa-aa21681bb"
+              >
+                <a target="_blank">
+                  <IconButton
+                    aria-label="linkedin"
+                    variant="ghost"
+                    size="lg"
+                    isRound={true}
+                    _hover={{ bg: '#0D74FF' }}
+                    icon={<BsLinkedin size="20px" color="white" />}
+                  />
+                </a>
+              </Link>
             </HStack>
           </Box>
         </Flex>
