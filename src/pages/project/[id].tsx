@@ -26,7 +26,7 @@ const ProjectDetail: React.FC = () => {
  
   useEffect(() => {
     if (!id) return
-    const project = projectList.find((projectItem) => projectItem.id == id)
+    const project = projectList.find((projectItem) => projectItem.id == Number(id))
     setData(project)
   }, [id])
 
