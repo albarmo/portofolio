@@ -45,12 +45,12 @@ const Hero: React.FC = () => {
             >
               <div id="scene2">
                 <div data-depth="0.8">
-                  <Text fontSize="lg">Saturn</Text>
+                  <Text fontSize="lg">Hello</Text>
                   <Text fontSize={['2xl', '3xl', '4xl']} fontWeight="bold">
-                    Inspired by love and guided by knowledge
+                  Im Albar Moerhamsa
                   </Text>
                   <Text fontSize="sm" mt="3">
-                    - Bertrand Russell
+                    - Software Developer 
                   </Text>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import Navbar from '@components/Navbar'
 import { Box, Center, Container, Text } from '@chakra-ui/react'

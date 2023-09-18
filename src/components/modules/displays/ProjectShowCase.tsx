@@ -1,5 +1,5 @@
+//@ts-nocheck
 import React from 'react'
-import type { NextPage } from 'next'
 import { Box, Container, Flex, Text, Image, HStack } from '@chakra-ui/react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -25,6 +25,17 @@ const ProjectShowcase: React.FC = () => {
     },
   }
 
+  const projectList = [
+    {id:1, title: 'Sofdulur', imgSrc: '/assets/projects/softdulur.png', link: 'https://softdulur-landing-git-main-albarmo.vercel.app', description: '' },
+    {id:2, title: 'Plagams', imgSrc: '/assets/projects/plagams.png', link: 'https://www.plagams.store', description: 'plagams official store. Nexts, Nodejs, Postgres SQL' },
+    {id:3, title: 'Magin Official Website', imgSrc: '/assets/projects/magin.png', link: 'https://s-magin-app.vercel.app', description: 'Kids clothes online shop. Nextjs, Nodejs, Postgres SQL' },
+    {id:4, title: 'The Way', imgSrc: '/assets/projects/theway.png', link: '/un-published', description: 'Goal Trackers App' },
+    {id:5, title: 'Terserahin (UI/UX)', imgSrc: '/assets/projects/terserahin.png', link: 'https://www.figma.com/file/zJDt3yvop9JcRNZhodidYd/Ters erahin?type=design&node- id=103%3A52141&mode=design&t=LCZvuo8kbFbkyS\n-1', description: 'Place and food recomendation' },
+    {id:6, title: 'KulturLokal', imgSrc: '/assets/projects/kulturlokal.png', link: 'https://www.kulturlokal.id', description: '' },
+    {id:7, title: 'Semangatbaik', imgSrc: '/assets/projects/semangatbaik.png', link: 'http://semangatbaik.com', description: '' },
+    {id:8, title: 'Teskarir', imgSrc: '/assets/projects/teskarir.png', link: 'https://teskarir.com', description: 'psychological test website to determine career pathways. Qore, React, SCSS' },
+  ]
+
   return (
     <Container
       h="60vh"
@@ -43,19 +54,16 @@ const ProjectShowcase: React.FC = () => {
               Showcase
             </Text>
           </HStack>
-          <Text className="text-gray-500 mt-3 xs:text-center sm:text-left">
-            Boleh diliat liat dulu kakak..
-          </Text>
         </Box>
       </Flex>
       <Box
-        mt={[0, 0, 0]}
+        mt={10}
         w={['85vw', '100%', 'container.sm', 'container.md', 'container.lg']}
         p={[0, 5, 0]}
       >
         <Carousel responsive={responsiveProject}>
-          {['1', '2', '3', '4', '5']?.map((item: any, index: number) => (
-            <ProjectCard hasTitle={false} key={index} item={item} />
+          {projectList.map((project: any, index: number) => (
+            <ProjectCard hasTitle={true} key={index} project={project} />
           ))}
         </Carousel>
       </Box>

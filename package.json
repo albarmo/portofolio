@@ -1,11 +1,13 @@
 {
   "name": "portofolio",
   "version": "0.1.0",
+  "homepage": "https://barworks.tech",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "export": "next export",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {

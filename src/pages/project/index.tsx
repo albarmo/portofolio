@@ -2,8 +2,19 @@ import React from 'react'
 import { Container, Flex, Text, HStack, Box } from '@chakra-ui/react'
 import 'react-multi-carousel/lib/styles.css'
 import Navbar from '@components/Navbar'
-import ProjectShowcase from '@components/modules/displays/ProjectShowCase'
 import ProjectCard from '@components/modules/cards/ProjectCard'
+
+const projectList = [
+  { id: 1, title: 'Sofdulur', imgSrc: '/assets/projects/softdulur.png', link: 'https://softdulur-landing-git-main-albarmo.vercel.app', description: '' },
+  { id: 2, title: 'Plagams', imgSrc: '/assets/projects/plagams.png', link: 'https://www.plagams.store', description: 'plagams official store. Nexts, Nodejs, Postgres SQL' },
+  { id: 3, title: 'Magin Official Website', imgSrc: '/assets/projects/magin.png', link: 'https://s-magin-app.vercel.app', description: 'Kids clothes online shop. Nextjs, Nodejs, Postgres SQL' },
+  { id: 4, title: 'The Way', imgSrc: '/assets/projects/theway.png', link: '/un-published', description: 'Goal Trackers App' },
+  { id: 5, title: 'Terserahin (UI/UX)', imgSrc: '/assets/projects/terserahin.png', link: 'https://www.figma.com/file/zJDt3yvop9JcRNZhodidYd/Ters erahin?type=design&node- id=103%3A52141&mode=design&t=LCZvuo8kbFbkyS\n-1', description: 'Place and food recomendation' },
+  { id: 6, title: 'KulturLokal', imgSrc: '/assets/projects/kulturlokal.png', link: 'https://www.kulturlokal.id', description: '' },
+  { id: 7, title: 'Semangatbaik', imgSrc: '/assets/projects/semangatbaik.png', link: 'http://semangatbaik.com', description: '' },
+  { id: 8, title: 'Teskarir', imgSrc: '/assets/projects/teskarir.png', link: 'https://teskarir.com', description: 'psychological test website to determine career pathways. Qore, React, SCSS' },
+]
+
 
 const ProjectDetail: React.FC = () => {
   return (
@@ -33,26 +44,13 @@ const ProjectDetail: React.FC = () => {
               My Works
             </Text>
             <Text fontSize="sm" mt="3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
-              turpis eget magna iaculis suscipit. Vivamus iaculis mauris nulla,
-              ac malesuada elit posuere nec. Nulla facilisi. Aliquam erat
-              volutpat. Duis sodales, leo faucibus fermentum feugiat, lectus
-              nibh pretium tortor, at sagittis ligula turpis a tellus. Nulla
-              facilisi. Aliquam erat volutpat. Duis sodales, leo faucibus
-              fermentum feugiat, lectus nibh pretium tortor, at sagittis ligula
-              turpis a tellus. Ut ex mi, scelerisque ac scelerisque id, finibus
-              sed odio. Pellentesque bibendum at dolor ac dignissim. Etiam id
-              volutpat elit, a volutpat orci. Praesent at convallis orci.
+             My project experience
             </Text>
             <Box mt="10" className="mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1">
-                <ProjectCard item={'1'} hasTitle={true} />
-                <ProjectCard item={'1'} hasTitle={true} />
-                <ProjectCard item={'1'} hasTitle={true} />
-                <ProjectCard item={'1'} hasTitle={true} />
-                <ProjectCard item={'1'} hasTitle={true} />
-                <ProjectCard item={'1'} hasTitle={true} />
-                <ProjectCard item={'1'} hasTitle={true} />
+                {projectList.map((project: any, index: number) => (
+                  <ProjectCard hasTitle={true} key={index} project={project} />
+                ))}
               </div>
             </Box>
           </Flex>

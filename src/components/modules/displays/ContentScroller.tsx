@@ -2,9 +2,7 @@ import { Box, Center, Container, Text, Image } from '@chakra-ui/react'
 import { motion, Variants } from 'framer-motion'
 
 interface Props {
-  emoji: string
-  hueA: number
-  hueB: number
+  item: any
   id: number
 }
 
@@ -37,23 +35,17 @@ const textVariants: Variants = {
     },
   },
 }
-const hue = (h: number) => `hsl(${h}, 100%, 50%)`
 
-function Card({ emoji, hueA, hueB, id }: Props) {
-  const randomizeBackground = `linear-gradient(306deg, ${hue(hueA)}, ${hue(
-    hueB,
-  )})`
-
+function Card({  item, id }: Props) {
   return (
-    <Box>
-      <motion.div
+  <Box>
+    <motion.div
         className="card-container bg-red"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
       >
         <motion.div className="card mt-5 mr-10" variants={cardVariants}>
-          {/* <ProjectCard item={1} hasTitle={false} /> */}
           <Image
             src={`/assets/planets/planet${id + 1}.png`}
             alt="moon"
@@ -62,16 +54,15 @@ function Card({ emoji, hueA, hueB, id }: Props) {
         </motion.div>
         <motion.div variants={textVariants}>
           <Box w={['100%', '500px']} overflow="hidden">
-            <Text fontSize="lg">Saturn</Text>
+            <Text fontSize="lg">{item.year} </Text>
             <Text fontSize={['xl', '2xl', '3xl']} fontWeight="bold">
-              Inspired by love and guided by knowledge
+             {item.title}
+            </Text>
+              <Text fontSize={'md'} fontWeight="light" color={'yellow'}>
+             {item.jobTitle}
             </Text>
             <Text fontSize="sm" mt="3">
-              Experimenting with distilling swipe offset and velocity into a
-              single variable, so the * less distance a user has swiped, the
-              more velocity they need to register as a swipe. * Should
-              accomodate longer swipes and short flicks without having binary
-              checks on * just distance thresholds and velocity.
+             {item.description}
             </Text>
           </Box>
         </motion.div>
@@ -80,18 +71,19 @@ function Card({ emoji, hueA, hueB, id }: Props) {
   )
 }
 
-const food: [string, number, number][] = [
-  ['🍅', 340, 10],
-  ['🍊', 20, 40],
-  ['🍋', 60, 90],
-]
+ const carrerList = [
+    { title: 'PT. Entrepreneur Trust Digital', jobTitle: 'Frontend Developer', year: 'Apr 2023 - Present ', description: 'Asigned as Frontend Engineer on one biggest Bank in Indonesia (BRI). Jakarta Metropolitan Area, NextJS, Tailwind' },
+    { title: 'Feedloop', year: '2021 - 2023',jobTitle: 'Software Engineer', description: 'Asigned as a team member of Qorebase App an Low-Code Platform by Feedloop, im also developing and maintaining client project' },
+    { title: 'Everidea Interactive', jobTitle: 'Frontend Web Developer', year: '2021', description: 'Builiding official media platform Semangatbaik & Kulturlokal and profile page. Web Development · JavaScript · Web Design · Node.js' },
+    { title: 'Gerakan Nasional 1000 Startup Digital',jobTitle: 'Fullstack Web Developer', year: '2020', description: 'Joined the start up team Teskarir, an web based app to scale and recomended carrer path. Web Development · JavaScript · Web Design · Node.js' }
+  ] 
 
 const ContentScroller: any = () => {
-  return food.map(([emoji, hueA, hueB], index) => (
+  return carrerList.map((item, index) => (
     <Container className="container text-white pb-20" key={index}>
       <Center>
         <Box display={'flex'} justifyContent="center" mt="20">
-          <Card emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} id={index} />
+          <Card item={item} id={index} />
         </Box>
       </Center>
     </Container>

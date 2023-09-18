@@ -1,22 +1,22 @@
-import { Box, Tag, Text } from '@chakra-ui/react'
-import { useRouter } from 'next/router'
+import { Box, Tag, Text,Link } from '@chakra-ui/react'
 
 interface IPropsBlogCard {
   item: any
 }
 const BlogCard: React.FC<IPropsBlogCard> = ({ item }) => {
-  const router = useRouter()
   return (
     <Box w={['90%']} mb="5">
-      <Tag variant="solid" colorScheme="teal" size="sm" mb="4">
-        React
-      </Tag>
+      <Link href={item?.link} target='_blank'>
       <Text
         className="text-sm font-semibold text-justify cursor-pointer"
-        onClick={() => router.push('/blog/1')}
-      >
-        Five Ways Tech Startups Are Different from Other Small and Medium-Sized
-        Enterprises
+        >
+       {item?.title}
+        </Text>
+        </Link>
+         <Text
+        className="text-sm font-light mt-2 text-justify cursor-pointer"
+        >
+       {item?.writer}
       </Text>
     </Box>
   )

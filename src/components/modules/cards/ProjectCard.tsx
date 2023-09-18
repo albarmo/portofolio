@@ -2,24 +2,24 @@ import { Box, Image, Text } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
 interface IPropsProjectCard {
-  item: any
+  project: any
   hasTitle: boolean
 }
-const ProjectCard: React.FC<IPropsProjectCard> = ({ item, hasTitle }) => {
+const ProjectCard: React.FC<IPropsProjectCard> = ({ project, hasTitle }) => {
   const router = useRouter()
   return (
     <Box
       h="280px"
       mr={[0, 5]}
-      onClick={() => router.push('/project/1')}
+      onClick={() => router.push(`/project/${project.id}`)}
       cursor="pointer"
     >
       <Image
         w="420px"
         h="auto"
         objectFit="contain"
-        src="../assets/project-1.jpg"
-        alt={item}
+        src={project?.imgSrc}
+        alt={project.title}
       />
       {hasTitle && (
         <Text
@@ -28,8 +28,9 @@ const ProjectCard: React.FC<IPropsProjectCard> = ({ item, hasTitle }) => {
           textColor="black"
           className="hover: text-white"
         >
-          Project {item}
+          {project.title}
         </Text>
+        
       )}
     </Box>
   )
