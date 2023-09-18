@@ -10,6 +10,9 @@
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "18.17.0"
+  },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.6",
