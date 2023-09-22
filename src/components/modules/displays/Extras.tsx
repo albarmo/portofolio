@@ -26,9 +26,9 @@ const Extras: React.FC = () => {
   }
 
   const extras = [
-    { id: 1, type:'Music', title: 'Midnigt Opera', link: 'https://www.bandlab.com/albarms/albums/2320bd6f-3255-ee11-9937-002248449027', imgSrc: '/assets/extras/album-cover.jpeg' },
+    { id: 1, type: 'Music', title: 'Midnigt On Earth', link: 'https://www.bandlab.com/albarms/albums/2320bd6f-3255-ee11-9937-002248449027', imgSrc: '/assets/extras/midnight-on-earth.png' },
     { id: 1, type: 'Music', title: 'The Moer', link: 'https://open.spotify.com/artist/1BrFUS5TV1ipVjXhi0UniR?si=zfIUPz-TQMyoypQggLE0mw', imgSrc: '/assets/extras/themoer.jpg' },
-    { id: 1,  type:'Music',title: 'Bandcamp', link: 'https://themoer.bandcamp.com/album/midnight-opera', imgSrc: 'https://cdn.myportfolio.com/d7ee1b49-3469-4704-82c9-43b74006450a/6ce1f970-20dd-4f83-a34c-04bf79d4e276_car_4x3.png?h=207d523dd032cb377999bcf495c67e41' }
+    { id: 1, type: 'Music', title: 'Bandcamp', link: 'https://themoer.bandcamp.com/album/midnight-opera', imgSrc: 'https://cdn.myportfolio.com/d7ee1b49-3469-4704-82c9-43b74006450a/6ce1f970-20dd-4f83-a34c-04bf79d4e276_car_4x3.png?h=207d523dd032cb377999bcf495c67e41' }
   ]
 
   return (
